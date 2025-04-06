@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Before It's Deleted!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      background-image: url('https://example.com/background.jpg'); /* خلفية جميلة */
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .teaser-img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      margin: 15px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+    .teaser-img:hover {
+      transform: scale(1.05); /* تكبير الصورة عند التمرير */
+    }
+    .headline {
+      font-size: 26px;
+      color: #ff4d4d;
+      margin: 20px 0;
+    }
+    .subheadline {
+      font-size: 18px;
+      color: #ccc;
+      margin: 20px 0;
+    }
+    .cta-button {
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #cc0000;
+      transform: scale(1.1); /* تكبير الزر عند التمرير */
+    }
+    .hot-banner {
+      background-color: red;
+      color: #fff;
+      font-size: 16px;
+      padding: 5px 20px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+    .hot-banner:hover {
+      background-color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="headline" id="headline">This Video Is Going Viral – Watch Before It's Removed!</h1>
+    <p class="subheadline" id="subheadline">Don't miss out! Click on any image to see the full content before it disappears.</p>
+
+    <!-- 10 Images will be added here dynamically -->
+    <div id="images-container"></div>
+
+    <p class="subheadline">18+ Only. Viewer discretion advised.</p>
+    <!-- Same CPA Link for all images, updated by JavaScript -->
+    <button class="cta-button" id="ctaButton" onclick="window.location.href='https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d'">Watch Now</button>
+  </div>
+
+  <script>
+    // Function to dynamically add images to the page
+    function addImages() {
+      const imagesContainer = document.getElementById('images-container');
+      const imagesData = [
+        {src: "https://musfiq.me/cssandjs/landing/images/4.jpeg", cpaLink: "https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d"},
+        {src: "https://musfiq.me/cssandjs/landing/images/6.jpeg", cpaLink: "https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d"},
+        {src: "https://musfiq.me/cssandjs/landing/images/5.jpeg", cpaLink: "https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d"},
+        {src: "https://musfiq.me/cssandjs/landing/images/1.jpeg", cpaLink: "https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d"},
+        {src: "https://i.postimg.cc/Hnx8mtNz/photo-2025-04-06-13-24-54.jpg", cpaLink: "https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d"},
+        {src: "https://i.imgur.com/LVBtOtl.jpeg", cpaLink: "https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d"},
+        {src: "https://i.imgur.com/CAuXkUp.jpeg", cpaLink: "https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d"}
+      ];
+
+      // Loop through the image data to add them to the container
+      imagesData.forEach(imageData => {
+        const img = document.createElement('img');
+        img.src = imageData.src;
+        img.classList.add('teaser-img');
+        
+        // Creating clickable "Hot" banner
+        const hotBanner = document.createElement('div');
+        hotBanner.classList.add('hot-banner');
+        hotBanner.textContent = 'Hot';
+        hotBanner.onclick = function() { 
+          window.location.href = imageData.cpaLink; 
+        };
+
+        // Adding image click event to navigate to the CPA link
+        img.onclick = function() {
+          window.location.href = imageData.cpaLink;
+        };
+
+        // Append the image and hot banner to the container
+        imagesContainer.appendChild(hotBanner);
+        imagesContainer.appendChild(img);
+      });
+    }
+
+    // Function to automatically click on each image after 5 seconds
+    function autoRedirectToLinks() {
+      setTimeout(() => {
+        // Redirecting to the first CPA link as an example
+        window.location.href = "https://enginedriverlatter.com/wj5cueqwvi?key=9d76e4f804149ad2f99e7092d6ce112d"; // Change this to your desired CPA link
+      }, 5000); // 5 seconds delay
+    }
+
+    // Initialize by adding images and auto redirect
+    window.onload = function() {
+      addImages();
+      autoRedirectToLinks(); // Call auto redirect function after loading images
+    };
+  </script>
+</body>
+</html>
